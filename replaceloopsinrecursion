@@ -1,0 +1,13 @@
+function sum(arr, n) {
+  // Only change code below this line
+  if (n <= 0) {
+    return 0;
+  } else {
+    return sum(arr, n - 1) + arr[n - 1];
+  }
+  sum([5,2,2,5,3],3);// ans = 9
+  // The first recursive will return sum(arr, 2) + arr[2];
+  // The second recursive will return sum(arr, 1) + arr[1];
+  // The third recursive will return sum(arr, 0) + arr[0];
+  // Because n = 0, it will return 0 this time.
+  // Now, we can combine all the 'RETURNS' : arr[0] + arr[1] + arr[2] + 0;
